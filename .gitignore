@@ -1,0 +1,23 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uilds/
+/[Ll]ogs/
+
+# Unity generated files
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.suo
+
+# macOS specific
+.DS_Store
+
+# Package Manager
+Packages/package-lock.json
+
+# User settings
+UserSettings/
