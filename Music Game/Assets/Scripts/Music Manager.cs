@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    public static MusicManager instance; // Singleton instance
+    public static MusicManager instance { get; set; } // Singleton instance
     [Header("Audio Settings")]
     public AudioSource musicSource;
     public float BPM = 120f; // Beats per minute
