@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb04903d930bc4b64b5b5c11c7aca9fb, type: 3}
+  m_Name: Quarter Note
+  m_EditorClassIdentifier: Assembly-CSharp::NoteChart
+  songTitle: Lesson1
+  musicClip: {fileID: 8300000, guid: 96cec0b6ebe61499d8a94bce1aa1847e, type: 3}
+  BPM: 120
+  offset: 0
+  notes:
+  - beat: 1
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 2
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 3
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 4
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 5
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 6
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 7
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 8
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 9
+    duration: 1
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  lessonDescription: 
+  showNoteNames: 1

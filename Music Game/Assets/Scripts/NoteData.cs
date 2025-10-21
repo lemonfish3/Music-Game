@@ -19,9 +19,11 @@ public class NoteData
 
     public enum NoteType
     {
-        Tap,
-        Hold,
-        Slide
+        Whole,
+        Half,
+        Quarter,
+        Eighth,
+        Sixteenth
     }
 }
 
