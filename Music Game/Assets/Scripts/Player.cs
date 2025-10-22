@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         HandleInput();
-        //UpdateAnimation();
+        UpdateAnimation();
     }
 
     void FixedUpdate()
@@ -40,12 +40,14 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Normalize diagonal movement
-        movement = movement.normalized;
+
 
         // Update facing direction when moving
         if (movement != Vector2.zero)
             facingDirection = movement;
+
+        // Normalize diagonal movement: MUST behide animation!! otherwise blend tree has error
+        movement = movement.normalized;
     }
 
     void Move()
@@ -53,12 +55,15 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    //void UpdateAnimation()
-    //{
-    //    animator.SetFloat("MoveX", movement.x);
-    //    animator.SetFloat("MoveY", movement.y);
-    //    animator.SetFloat("FacingX", facingDirection.x);
-    //    animator.SetFloat("FacingY", facingDirection.y);
-    //    animator.SetBool("IsMoving", movement.magnitude > 0);
-    //}
+    void UpdateAnimation()
+    {
+        //animator.SetFloat("MoveX", movement.x);
+        //animator.SetFloat("MoveY", movement.y);
+        //animator.SetFloat("FacingY", facingDirection.x);
+        //animator.SetFloat("FacingX", facingDirection.y);
+
+        animator.SetFloat("facing_x", facingDirection.x);
+        animator.SetFloat("facing_y", facingDirection.y);
+        animator.SetBool("is_running", movement.magnitude > 0);
+    }
 }
