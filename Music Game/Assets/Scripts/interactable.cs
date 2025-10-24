@@ -1,9 +1,12 @@
 using NUnit.Framework.Interfaces;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class interactable : MonoBehaviour
 {
     [SerializeField] private bool isPlayerNearby = false;
+    public GameObject LevelWindow;
+
 
     //public GameObject highlight;
 
@@ -18,8 +21,13 @@ public class interactable : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("interact with the sculpture");
+            LevelWindow.SetActive(true);
+
+            // PAUSE
+            Time.timeScale = 0.0f;
         }
     }
+
 
 
 
