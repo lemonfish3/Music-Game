@@ -17,40 +17,8 @@ MonoBehaviour:
   BPM: 120
   offset: 0
   notes:
-  - beat: 1
-    duration: 1
-    noteType: 2
-    noteName: 
-    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
-    lane: 0
-    isLongNote: 0
-    isRestNote: 0
-  - beat: 2
-    duration: 1
-    noteType: 2
-    noteName: 
-    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
-    lane: 0
-    isLongNote: 0
-    isRestNote: 0
-  - beat: 3
-    duration: 1
-    noteType: 2
-    noteName: 
-    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
-    lane: 0
-    isLongNote: 0
-    isRestNote: 0
-  - beat: 4
-    duration: 1
-    noteType: 2
-    noteName: 
-    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
-    lane: 0
-    isLongNote: 0
-    isRestNote: 0
   - beat: 5
-    duration: 1
+    duration: 0
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
@@ -58,7 +26,7 @@ MonoBehaviour:
     isLongNote: 0
     isRestNote: 0
   - beat: 6
-    duration: 1
+    duration: 0
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
@@ -66,7 +34,7 @@ MonoBehaviour:
     isLongNote: 0
     isRestNote: 0
   - beat: 7
-    duration: 1
+    duration: 0
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
@@ -74,7 +42,7 @@ MonoBehaviour:
     isLongNote: 0
     isRestNote: 0
   - beat: 8
-    duration: 1
+    duration: 0
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
@@ -82,7 +50,15 @@ MonoBehaviour:
     isLongNote: 0
     isRestNote: 0
   - beat: 9
-    duration: 1
+    duration: 0
+    noteType: 2
+    noteName: 
+    noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 10
+    duration: 0
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}

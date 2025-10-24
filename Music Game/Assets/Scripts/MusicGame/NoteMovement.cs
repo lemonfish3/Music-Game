@@ -11,10 +11,12 @@ public class NoteMovement : MonoBehaviour
     public Vector3 startPosition;
     public float noteLeadBeats = 2.0f; // How many beats before the target beat the note spawns
     [Header("Timing")]
-    public float lingerDuration = 0.5f;
+    public float lingerDuration = 1f;
     private bool isActive = true;
     private Vector3 endPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public bool isJudged = false;
     void Start()
     {
         if (musicManager == null)
@@ -30,17 +32,20 @@ public class NoteMovement : MonoBehaviour
     {
         if (musicManager == null) return;
         float currentBeat = musicManager.songPositionInBeats;
-        float beatsUnitlTarget = targetBeat - currentBeat;
-        // Debug.Log($"Note at beat {targetBeat} | Current Beat: {currentBeat:F2} | Beats until target: {beatsUnitlTarget:F2}");
-        float totalBeats = noteLeadBeats + lingerDuration; // Including extra distance after target
-        float t = Mathf.InverseLerp(noteLeadBeats, -lingerDuration, beatsUnitlTarget);
-        transform.position = Vector3.Lerp(startPosition, endPosition, t);
+        float spawnBeat = targetBeat - noteLeadBeats;
 
-        if (beatsUnitlTarget <= -lingerDuration)
+        float t = (currentBeat - spawnBeat) / (noteLeadBeats + lingerDuration);
+        t = Mathf.Clamp01(t); 
+        // Debug.Log($"Note at beat {targetBeat} | Current Beat: {currentBeat:F2} | Beats until target: {beatsUnitlTarget:F2}");
+        Vector3 finalPosition = targetPosition + (targetPosition - startPosition).normalized * lingerDuration;
+        transform.position = Vector3.Lerp(startPosition, finalPosition, t);
+
+        // Always destroy after linger duration, regardless of judgment
+        if (!isJudged && currentBeat >= targetBeat + lingerDuration)
         {
-            isActive = false;
-            Debug.Log($"Note at beat {targetBeat} destroyed at {currentBeat} after reaching target.");
+            isJudged = true;
             Destroy(gameObject);
+            Debug.Log($"[NoteMovement] Auto-destroyed note at beat {currentBeat:F2}");
         }
     }
     
