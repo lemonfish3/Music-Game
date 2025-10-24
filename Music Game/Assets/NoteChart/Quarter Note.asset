@@ -15,7 +15,7 @@ MonoBehaviour:
   songTitle: Lesson1
   musicClip: {fileID: 8300000, guid: 96cec0b6ebe61499d8a94bce1aa1847e, type: 3}
   BPM: 120
-  offset: 0
+  offset: 10
   notes:
   - beat: 5
     duration: 0
