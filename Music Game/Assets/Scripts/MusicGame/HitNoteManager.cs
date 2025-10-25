@@ -46,6 +46,9 @@ public class HitNoteManager : MonoBehaviour
     {
         if (musicManager == null) return;
 
+        // If music is not playing (paused/stopped), skip hit/miss processing
+        if (!musicManager.isPlaying) return;
+
         float currentBeat = musicManager.songPositionInBeats;
 
         // Refresh note list periodically instead of every frame

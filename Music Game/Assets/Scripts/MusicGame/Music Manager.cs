@@ -20,6 +20,7 @@ public class MusicManager : MonoBehaviour
 
     private float beatInterval;
     private float songStartTime;
+    private float pauseStartDspTime = 0f;
 
     void Awake()
     {
@@ -130,20 +131,35 @@ public class MusicManager : MonoBehaviour
     {
         if (isPlaying)
         {
+            // record when we paused using DSP time so we can exclude the paused duration from song timing
+            pauseStartDspTime = (float)AudioSettings.dspTime;
             musicSource.Pause();
             isPlaying = false;
+            // Do not modify Time.timeScale here — pausing the audio/beat timer should not freeze the whole engine
         }
     }
 
     public void ResumeMusic()
     {
-        if (isPlaying)
+        if (musicSource == null)
         {
             Debug.LogWarning("Music Source is not assigned.");
             return;
         }
+        if (isPlaying)
+        {
+            // already playing
+            return;
+        }
+
+        // Adjust songStartTime so the paused duration is not counted in the song position
+        float pauseEndDsp = (float)AudioSettings.dspTime;
+        float pausedDuration = pauseEndDsp - pauseStartDspTime;
+        songStartTime += pausedDuration;
+
         musicSource.UnPause();
         isPlaying = true;
+
     
     }
 
