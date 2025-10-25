@@ -37,7 +37,7 @@ public class NoteSpawner : MonoBehaviour
             Debug.LogWarning("Music is not playing or NoteChart is not assigned.");
             return;
         }
-        ;
+
 
         float songBeat = musicManager.songPositionInBeats;
 

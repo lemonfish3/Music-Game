@@ -12,10 +12,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb04903d930bc4b64b5b5c11c7aca9fb, type: 3}
   m_Name: Whole Note
   m_EditorClassIdentifier: Assembly-CSharp::NoteChart
-  songTitle: 
-  musicClip: {fileID: 0}
-  BPM: 120
+  songTitle: Whole Note
+  musicClip: {fileID: 8300000, guid: 0d51124ee5d2b4209bfa0480c5a639bf, type: 3}
+  BPM: 110
   offset: 0
-  notes: []
+  notes:
+  - beat: 16
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 20
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 24
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 28
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 32
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 36
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 40
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 44
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 48
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 52
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 56
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 60
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 64
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: -4106763870162758993, guid: 23a628dbd4c6f434bbb6edb327dc9346, type: 3}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
   lessonDescription: 
   showNoteNames: 1

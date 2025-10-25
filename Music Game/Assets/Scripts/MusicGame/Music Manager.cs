@@ -1,12 +1,17 @@
 using UnityEngine;
+using System.Collections;
 
 public class MusicManager : MonoBehaviour
 {
-    public static MusicManager instance { get; set; } // Singleton instance
+    public static MusicManager instance { get; private set; } // Singleton instance
     [Header("Audio Settings")]
     public AudioSource musicSource;
     public float BPM = 120f; // Beats per minute
     public float offsetTime = 0f; // Time offset in seconds
+
+    [Header("Note Chart")]
+    public NoteChart noteChart;
+
     
     [Header("Debug Info")]
     public bool isPlaying = false;
@@ -22,38 +27,30 @@ public class MusicManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            if (musicSource == null)
+            {
+                musicSource = gameObject.AddComponent<AudioSource>();
+                if (musicSource == null)
+                {
+                    Debug.LogError("Failed to create AudioSource component.");
+                }
+            }
         }
         else
         {
             Destroy(gameObject);
         }
-
-        beatInterval = 60f / BPM;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
-    public void StartMusic()
-    {
-        if (musicSource == null)
-        {
-            Debug.LogWarning("Music Source is not assigned.");
-            return;
-        }
 
-        songStartTime = (float)AudioSettings.dspTime;
-        musicSource.Play();
-        isPlaying = true;
-    }
     void Start()
     {
-        if (musicSource != null)
-        {
-            StartMusic();
-        }
-
+        NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)
+        MusicManager.instance.SetNoteChart(selectedChart);
+        MusicManager.instance.StartMusic();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (!isPlaying) return;
@@ -77,9 +74,50 @@ public class MusicManager : MonoBehaviour
         return GetSongTimeSeconds() / beatInterval;
     }
 
+    public void SetNoteChart(NoteChart newChart)
+    {
+        noteChart = newChart;
+        if (noteChart != null)
+        {
+            musicSource.clip = noteChart.musicClip;
+            BPM = noteChart.BPM;
+            offsetTime = noteChart.offset;
+            beatInterval = 60f / BPM;
+        }
+    }
+
+    public void StartMusic()
+    {
+        if (noteChart == null)
+        {
+            Debug.LogWarning("NoteChart is not assigned.");
+            return;
+        }
+        if (musicSource.clip == null)
+        {
+            musicSource.clip = noteChart.musicClip;
+        }
+        if (musicSource.clip == null)
+        {
+            Debug.LogWarning("No AudioClip assigned to NoteChart!");
+            return;
+        }
+
+        StartCoroutine(DelayedMusicStart(offsetTime));
+    }
+    IEnumerator DelayedMusicStart(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        musicSource.Play();
+        songStartTime = (float)AudioSettings.dspTime;
+        isPlaying = true;
+    }
+
+
+
     public void StopMusic()
     {
-        if (musicSource == null || !isPlaying)
+        if (!isPlaying)
         {
             Debug.LogWarning("Music Source is not assigned.");
             return;
@@ -90,7 +128,7 @@ public class MusicManager : MonoBehaviour
 
     public void PauseMusic()
     {
-        if (musicSource != null && isPlaying)
+        if (isPlaying)
         {
             musicSource.Pause();
             isPlaying = false;
@@ -99,7 +137,7 @@ public class MusicManager : MonoBehaviour
 
     public void ResumeMusic()
     {
-        if (musicSource == null || isPlaying)
+        if (isPlaying)
         {
             Debug.LogWarning("Music Source is not assigned.");
             return;

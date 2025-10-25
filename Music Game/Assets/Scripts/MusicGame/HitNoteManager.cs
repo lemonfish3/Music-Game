@@ -15,6 +15,9 @@ public class HitNoteManager : MonoBehaviour
 
     [Header("UI Feedback")]
     public string currentRating = ""; // Used by RatingUI
+    public string defaultRating = ""; // Rating to show when no judgment is active
+    public float resetRatingTime = 0.2f; // How long to show the rating before resetting
+    private float ratingResetTimer = 0f; // Timer for auto-resetting the rating
 
     void Awake()
     {
@@ -58,12 +61,22 @@ public class HitNoteManager : MonoBehaviour
         }
 
         CheckMissedNotes(currentBeat);
+
+        // Check if we should reset the rating
+        if (ratingResetTimer > 0)
+        {
+            ratingResetTimer -= Time.deltaTime;
+            if (ratingResetTimer <= 0)
+            {
+                currentRating = defaultRating;
+                Debug.Log($"[HitNoteManager] Rating reset to default: {defaultRating}");
+            }
+        }
     }
 
     void EvaluateHit()
     {
         float currentBeat = musicManager.songPositionInBeats;
-        NoteMovement bestNote = null;
         float closestDiff = Mathf.Infinity;
 
         foreach (var note in activeNotes)
@@ -74,19 +87,15 @@ public class HitNoteManager : MonoBehaviour
             if (diff < closestDiff)
             {
                 closestDiff = diff;
-                bestNote = note;
+                note.isJudged = true;
             }
         }
 
-        if (bestNote == null)
-        {
-            Debug.Log("No note to hit!");
-            return;
-        }
 
         // Judge accuracy
         if (closestDiff <= perfectThreshold)
         {
+            
             SetRating("Perfect");
         }
         else if (closestDiff <= goodThreshold)
@@ -124,6 +133,7 @@ public class HitNoteManager : MonoBehaviour
     void SetRating(string rating)
     {
         currentRating = rating;
+        ratingResetTimer = resetRatingTime; // Start the reset timer
         Debug.Log($"[{Time.time:F2}] {rating}!");
     }
 }

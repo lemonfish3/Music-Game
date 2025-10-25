@@ -9,7 +9,7 @@ public class NoteMovement : MonoBehaviour
     public float targetBeat; // The beat at which the note should reach the target position
     public Vector3 targetPosition;
     public Vector3 startPosition;
-    public float noteLeadBeats = 2.0f; // How many beats before the target beat the note spawns
+    public float noteLeadBeats = 2.5f; // How many beats before the target beat the note spawns
     [Header("Timing")]
     public float lingerDuration = 1f;
     private bool isActive = true;
@@ -44,6 +44,11 @@ public class NoteMovement : MonoBehaviour
         if (!isJudged && currentBeat >= targetBeat + lingerDuration)
         {
             isJudged = true;
+            Destroy(gameObject);
+            Debug.Log($"[NoteMovement] Auto-destroyed note at beat {currentBeat:F2}");
+        }
+        else if (currentBeat >= targetBeat + lingerDuration)
+        {
             Destroy(gameObject);
             Debug.Log($"[NoteMovement] Auto-destroyed note at beat {currentBeat:F2}");
         }
