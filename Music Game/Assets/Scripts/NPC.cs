@@ -2,10 +2,11 @@ using NUnit.Framework.Interfaces;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class interactable : MonoBehaviour
+public class NPC : MonoBehaviour
 {
     [SerializeField] private bool isPlayerNearby = false;
-    public GameObject LevelWindow;
+    public DialogueManager DialogueManager;
+    public DialogueNode starterNode;
 
 
     //public GameObject highlight;
@@ -21,15 +22,12 @@ public class interactable : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("interact with the sculpture");
-            LevelWindow.SetActive(true);
+            DialogueManager.StartDialogue(starterNode);
 
             // PAUSE
-            Time.timeScale = 0.0f;
+            // Time.timeScale = 0.0f;
         }
     }
-
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
