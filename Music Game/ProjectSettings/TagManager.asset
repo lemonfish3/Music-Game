@@ -38,16 +38,19 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: back
+    uniqueID: 4099517011
+    locked: 0
   - name: ground
     uniqueID: 2914339123
     locked: 0
-  - name: top
+  - name: objects
     uniqueID: 2481445723
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: effect
+  - name: top
     uniqueID: 42759547
     locked: 0
   m_RenderingLayers:

@@ -14,6 +14,8 @@ public class LevelWindow : MonoBehaviour
     public void OnStartClick()
     {
         OpenMusicGame();
+        //UNPAUSE
+        MapGameManager.Instance.ResumeGame();
     }
 
     public void OnCancelClick()
