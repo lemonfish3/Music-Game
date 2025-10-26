@@ -19,13 +19,12 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
+        if (MapGameManager.Instance.isPaused) return;
+
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("interact with the sculpture");
             DialogueManager.StartDialogue(starterNode);
-
-            // PAUSE
-            // Time.timeScale = 0.0f;
         }
     }
 

@@ -18,13 +18,12 @@ public class interactable : MonoBehaviour
 
     void Update()
     {
+        if (MapGameManager.Instance.isPaused) return;
+
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("interact with the sculpture");
             LevelWindow.SetActive(true);
-
-            // PAUSE
-            Time.timeScale = 0.0f;
         }
     }
 

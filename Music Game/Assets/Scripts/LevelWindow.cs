@@ -2,11 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelWindow : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    void Start() // called when set to activate
     {
-        gameObject.SetActive(false);
+        // PAUSE
+        MapGameManager.Instance.PauseGame();
     }
+
+
 
     public void OnStartClick()
     {
@@ -18,7 +21,7 @@ public class LevelWindow : MonoBehaviour
         gameObject.SetActive(false);
 
         //UNPAUSE
-        Time.timeScale = 1.0f;
+        MapGameManager.Instance.ResumeGame();
     }
 
     void OpenMusicGame()

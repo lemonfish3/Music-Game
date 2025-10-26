@@ -23,8 +23,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        dialoguePanel.SetActive(false);
-        replyButtonParent.gameObject.SetActive(false);
+        // PAUSE
+        MapGameManager.Instance.PauseGame();
     }
 
     private void Update()
@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueNode node)
     {
+
         // basic set
         dialogue_active = true;
         current_node = node;
@@ -111,7 +112,7 @@ public class DialogueManager : MonoBehaviour
         current_node = null;
 
         //RESUME
-        Time.timeScale = 1.0f;
+        MapGameManager.Instance.ResumeGame();
     }
 
 }

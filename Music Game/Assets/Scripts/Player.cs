@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (MapGameManager.Instance.isPaused) return;
         HandleInput();
         UpdateAnimation();
     }
