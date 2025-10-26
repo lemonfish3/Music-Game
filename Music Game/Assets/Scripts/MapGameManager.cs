@@ -3,7 +3,8 @@ using UnityEngine;
 public class MapGameManager : MonoBehaviour
 {
     public static MapGameManager Instance;
-    public bool isPaused { get; private set; }
+    
+    public bool isPaused;
 
     void Awake()
     {

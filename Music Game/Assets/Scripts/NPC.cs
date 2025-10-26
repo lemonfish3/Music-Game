@@ -9,13 +9,12 @@ public class NPC : MonoBehaviour
     public DialogueNode starterNode;
 
 
-    //public GameObject highlight;
+    public GameObject interactPrompt;
 
-    //void Start()
-    //{
-    //    if (interactPrompt != null)
-    //        interactPrompt.SetActive(false);
-    //}
+    void Start()
+    {
+        interactPrompt.SetActive(false);
+    }
 
     void Update()
     {
@@ -34,10 +33,7 @@ public class NPC : MonoBehaviour
         {
             isPlayerNearby = true;
 
-            // highlight.SetActive(true);
-
-            //if (pickUpPrompt != null)
-            //    pickUpPrompt.SetActive(true);
+            interactPrompt.SetActive(true);
         }
     }
 
@@ -47,10 +43,7 @@ public class NPC : MonoBehaviour
         {
             isPlayerNearby = false;
 
-            //highlight.SetActive(false);
-
-            //if (pickUpPrompt != null)
-            //    pickUpPrompt.SetActive(false);
+            interactPrompt.SetActive(false);
         }
     }
 }

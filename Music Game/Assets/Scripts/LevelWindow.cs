@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 public class LevelWindow : MonoBehaviour
 {
 
-    void Start() // called when set to activate
+    void OnEnable() // called when set to activate
     {
         // PAUSE
         MapGameManager.Instance.PauseGame();
     }
 
-
+    
 
     public void OnStartClick()
     {

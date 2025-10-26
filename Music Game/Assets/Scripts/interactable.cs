@@ -8,13 +8,12 @@ public class interactable : MonoBehaviour
     public GameObject LevelWindow;
 
 
-    //public GameObject highlight;
+    public GameObject interactPrompt;
 
-    //void Start()
-    //{
-    //    if (interactPrompt != null)
-    //        interactPrompt.SetActive(false);
-    //}
+    void Start()
+    {
+        interactPrompt.SetActive(false);
+    }
 
     void Update()
     {
@@ -36,10 +35,7 @@ public class interactable : MonoBehaviour
         {
             isPlayerNearby = true;
 
-            // highlight.SetActive(true);
-
-            //if (pickUpPrompt != null)
-            //    pickUpPrompt.SetActive(true);
+            interactPrompt.SetActive(true);
         }
     }
 
@@ -49,10 +45,7 @@ public class interactable : MonoBehaviour
         {
             isPlayerNearby = false;
 
-            //highlight.SetActive(false);
-
-            //if (pickUpPrompt != null)
-            //    pickUpPrompt.SetActive(false);
+            interactPrompt.SetActive(false);
         }
     }
 }

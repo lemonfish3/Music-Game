@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
     private int line_index = 0;
 
 
-    private void Start()
+    private void OnEnable()
     {
         // PAUSE
         MapGameManager.Instance.PauseGame();
