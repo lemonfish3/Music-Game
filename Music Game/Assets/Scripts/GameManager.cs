@@ -3,10 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance { get; private set; }
+
     [Header("Game Settings")]
     public int score = 0;
     public int combo = 0;
     public int maxCombo = 0;
+
+    // Accuracy tracking
+    private int totalNotes = 0;
+    private int hitNotes = 0; 
 
     [Header("References")]
     public MusicManager musicManager;
@@ -17,6 +23,23 @@ public class GameManager : MonoBehaviour
 
     [Header("UI Elements")]
     public GameObject pauseMenuUI;
+    public GameObject resultsPanel; // Assign your UI panel in Inspector
+    public TMPro.TextMeshProUGUI finalScoreText;
+    public TMPro.TextMeshProUGUI finalComboText;
+    public TMPro.TextMeshProUGUI accuracyText;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +54,8 @@ public class GameManager : MonoBehaviour
         }
         musicManager.StartMusic();
         isGameActive = true;
+
+        totalNotes = musicManager.noteChart.notes.Count;
     }
 
     // Update is called once per frame
@@ -73,5 +98,57 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Music");
     }
+
+
+    public void RegisterHit(string rating)
+    {
+        int points = 0;
+
+        switch (rating)
+        {
+            case "Perfect":
+                points = 1000;
+                combo++;
+                hitNotes++;
+                break;
+            case "Good":
+                points = 500;
+                combo++;
+                hitNotes++;
+                break;
+            case "Miss":
+                combo = 0;
+                break;
+        }
+
+        score += points;
+        if (combo > maxCombo)
+            maxCombo = combo;
+
+        Debug.Log($"[GameManager] Score: {score} | Combo: {combo} | MaxCombo: {maxCombo}");
+    }
+
+    public void EndGame()
+    {
+        isGameActive = false;
+        musicManager.PauseMusic();
+
+        // Display results panel
+        resultsPanel.SetActive(true);
+
+        // Fill in results
+        finalScoreText.text = $"Score: {score}";
+        finalComboText.text = $"Max Combo: {maxCombo}";
+        accuracyText.text = $"Accuracy: {GetAccuracy():F1}%";
+
+        Debug.Log($"[GameManager] Game Ended | Score: {score} | Max Combo: {maxCombo} | Accuracy: {GetAccuracy():F1}%");
+    }
+
+    public float GetAccuracy()
+    {
+        if (totalNotes == 0) return 0f;
+        return (float)hitNotes / totalNotes * 100f;
+    }
+
 }
 

@@ -22,6 +22,9 @@ public class MusicManager : MonoBehaviour
     private float songStartTime;
     private float pauseStartDspTime = 0f;
 
+    [Header("Reference")]
+    private GameManager GameManagerInstance;
+
     void Awake()
     {
         if (instance == null)
@@ -47,8 +50,14 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)
+        if (noteChart == null)
+        {
+            Debug.LogError("No NoteChart assigned! Please assign one in the Inspector or load dynamically.");
+            return;
+        }
         MusicManager.instance.SetNoteChart(selectedChart);
         MusicManager.instance.StartMusic();
+        GameManagerInstance = FindObjectOfType<GameManager>();
     }
 
 
@@ -57,6 +66,11 @@ public class MusicManager : MonoBehaviour
         if (!isPlaying) return;
         songPosition = (float)(AudioSettings.dspTime - songStartTime) + offsetTime;
         songPositionInBeats = songPosition / beatInterval;
+
+        if (songPosition >= musicSource.clip.length)
+        {
+            GameManager.instance.EndGame();
+        }
     }
 
     public float GetSongTimeSeconds()
