@@ -91,14 +91,54 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainGame()
     {
+        QuitMusicGame();
         SceneManager.LoadScene("Map");
     }
 
+    // public void Restart()
+    // {
+    //     // if(SceneManager.scene == "Music"){
+    //     //     //setting up the notechart and other settings
+    //     // }
+    //     SceneManager.LoadScene("Music");
+    // }
+
     public void Restart()
     {
-        SceneManager.LoadScene("Music");
+        resultsPanel.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        score = 0;
+        combo = 0;
+        maxCombo = 0;
+        hitNotes = 0;
+        isGameActive = true;
+        
+        // Reset and restart the song
+        musicManager.RestartMusic();
+
+        // Clear all existing notes
+        foreach (var note in FindObjectsOfType<NoteMovement>())
+            Destroy(note.gameObject);
+
+        // Reset spawner
+        NoteSpawner spawner = FindObjectOfType<NoteSpawner>();
+        if (spawner != null)
+            spawner.ResetSpawner();
     }
 
+    public void StartGame(NoteChart newChart)
+    {
+        // Reset music first
+        if (MusicManager.instance != null)
+        {
+            MusicManager.instance.ResetMusicSettings();
+            MusicManager.instance.SetNoteChart(newChart);
+            MusicManager.instance.StartMusic();
+        }
+
+        // Initialize gameplay systems here
+        Debug.Log("Game started with new chart: " + newChart.name);
+    }
 
     public void RegisterHit(string rating)
     {
@@ -128,6 +168,15 @@ public class GameManager : MonoBehaviour
         Debug.Log($"[GameManager] Score: {score} | Combo: {combo} | MaxCombo: {maxCombo}");
     }
 
+    public void QuitMusicGame(){
+        // Stop music and clean up
+        if (MusicManager.instance != null)
+        {
+            MusicManager.instance.StopMusic();
+        }
+        Debug.Log("Game quited!");
+    }
+
     public void EndGame()
     {
         isGameActive = false;
@@ -149,6 +198,13 @@ public class GameManager : MonoBehaviour
         if (totalNotes == 0) return 0f;
         return (float)hitNotes / totalNotes * 100f;
     }
+
+    void SetVolume()
+    {
+        // change the volume for all scene?
+        return;
+    }
+    
 
 }
 
