@@ -49,6 +49,7 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
+        ResetMusicSettings();
         NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)
         if (noteChart == null)
         {
@@ -60,6 +61,50 @@ public class MusicManager : MonoBehaviour
         GameManagerInstance = FindObjectOfType<GameManager>();
     }
 
+    // void Start()
+    // {
+    //     NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)
+    //     if (noteChart == null)
+    //     {
+    //         Debug.LogError("No NoteChart assigned! Please assign one in the Inspector or load dynamically.");
+    //         return;
+    //     }
+    //     MusicManager.instance.SetNoteChart(selectedChart);
+    //     MusicManager.instance.StartMusic();
+    //     GameManagerInstance = FindObjectOfType<GameManager>();
+    // }
+
+    public void ResetMusicSettings(bool keepChart = true)
+    {
+        StopAllCoroutines();
+
+        if (musicSource != null)
+        {
+            musicSource.Stop();
+            musicSource.time = 0f;
+        }
+
+        isPlaying = false;
+        songPosition = 0f;
+        songPositionInBeats = 0f;
+        songStartTime = 0f;
+        pauseStartDspTime = 0f;
+
+        // clear chart if specified
+        if (!keepChart)
+        {
+            noteChart = null;
+            musicSource.clip = null;
+        }
+
+        Debug.Log("[MusicManager] Music system reset.");
+    }
+
+    public void RestartMusic()
+    {
+        ResetMusicSettings(true); // Reset but keep current note chart
+        StartMusic();
+    }
 
     void Update()
     {

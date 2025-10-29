@@ -48,7 +48,7 @@ public class NoteSpawner : MonoBehaviour
             nextNoteIndex++;
         }
     }
-    
+
     void SpawnNote(NoteData noteData)
     {
         if (notePrefab == null || spawnPoint == null)
@@ -58,8 +58,8 @@ public class NoteSpawner : MonoBehaviour
         }
 
         GameObject obj = Instantiate(notePrefab, spawnPoint.position, Quaternion.identity);
-        
-    
+
+
         NoteMovement noteMovement = obj.GetComponent<NoteMovement>();
         if (noteMovement != null)
         {
@@ -72,5 +72,38 @@ public class NoteSpawner : MonoBehaviour
         }
 
         Debug.Log($"Spawned {noteData.noteType} note at beat {noteData.beat}, songBeat: {musicManager.songPositionInBeats:F2}");
+    }
+
+    public void ResetSpawner()
+    {
+        nextNoteIndex = 0;
+        DestroyObjectsWithTag("Note");
+        noteChart = MusicManager.instance.noteChart;
+        if (noteChart == null)
+        {
+            Debug.LogWarning("NoteChart is not assigned.");
+        }
+        else
+        {
+            Debug.Log($"Loaded NoteChart: {noteChart.songTitle} with {noteChart.notes.Count} notes.");
+        }
+        if (musicManager == null)
+        {
+            Debug.LogWarning("MusicManager is not assigned.");
+        }
+        Debug.Log($"song beat{musicManager.songPositionInBeats}");
+        Debug.Log($"[NoteSpawner] Resetting with chart: {noteChart.songTitle}");
+        Debug.Log($"[NoteSpawner] Total notes: {noteChart.notes.Count}");
+
+    }
+    
+    void DestroyObjectsWithTag(string tagToDestroy)
+    {
+        GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag(tagToDestroy);
+
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
     }
 }
