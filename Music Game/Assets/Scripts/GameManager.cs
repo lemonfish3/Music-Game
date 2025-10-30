@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
         // Initialize gameplay systems here
         Debug.Log("Game started with new chart: " + newChart.name);
     }
-
+    
     public void RegisterHit(string rating)
     {
         int points = 0;
