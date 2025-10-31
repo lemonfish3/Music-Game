@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -25,42 +27,98 @@ public class MusicManager : MonoBehaviour
     [Header("Reference")]
     private GameManager GameManagerInstance;
 
+    [Header("UI Elements")]
+    [SerializeField] private GameObject pause;
+    [SerializeField] private GameObject results; // Assign your UI panel in Inspector
+    [SerializeField] private TMPro.TextMeshProUGUI finalScore;
+    [SerializeField] private TMPro.TextMeshProUGUI finalCombo;
+    [SerializeField] private TMPro.TextMeshProUGUI accuracy;
+
+    [SerializeField] private Button pauseRestart;
+    [SerializeField] private Button pauseBack;
+    [SerializeField] private Button finalRestart;
+    [SerializeField] private Button finalBack;
+
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
-
-            if (musicSource == null)
-            {
-                musicSource = gameObject.AddComponent<AudioSource>();
-                if (musicSource == null)
-                {
-                    Debug.LogError("Failed to create AudioSource component.");
-                }
-            }
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+        if (musicSource == null)
+        {
+            musicSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     void Start()
     {
-        ResetMusicSettings();
-        NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)
-        if (noteChart == null)
+        // Ensure AudioSource exists
+        if (musicSource == null)
+            musicSource = gameObject.AddComponent<AudioSource>();
+
+        // Only assign chart if GameManager exists
+        if (noteChart == null && GameManager.instance != null)
+            noteChart = GameManager.instance.noteChart;
+
+        // UI should always be set up, independent of noteChart
+        UISetUp();
+
+        // Only start music if noteChart exists
+        if (noteChart != null)
         {
-            Debug.LogError("No NoteChart assigned! Please assign one in the Inspector or load dynamically.");
-            return;
+            SetNoteChart(noteChart);
+            //ReStartMusic();
+            GameManager.instance.Restart();
         }
-        MusicManager.instance.SetNoteChart(selectedChart);
-        MusicManager.instance.StartMusic();
-        GameManagerInstance = FindObjectOfType<GameManager>();
     }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Load Music Scene");
+        UISetUp();// re-run bindings
+    }
+
+    void UISetUp()
+    {
+        GameManager.instance.pauseMenuUI = pause;
+        GameManager.instance.resultsPanel = results;
+        GameManager.instance.finalScoreText = finalScore;
+        GameManager.instance.finalComboText = finalCombo;
+        GameManager.instance.accuracyText = accuracy;
+
+        BindButton(pauseRestart, () => GameManager.instance?.Restart());
+        BindButton(finalRestart, () => GameManager.instance?.Restart());
+
+        BindButton(pauseBack, () => GameManager.instance?.LoadMainGame());
+        BindButton(finalBack, () => GameManager.instance?.LoadMainGame());
+    }
+
+    private void BindButton(Button button, System.Action action)
+    {
+        if (button == null)
+        {
+            Debug.LogWarning("Button reference is missing!");
+            return;
+        }
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(() => action?.Invoke());
+    }
     // void Start()
     // {
     //     NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)

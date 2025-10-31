@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelWindow : MonoBehaviour
 {
-
+    public NoteChart noteChart; // assign different note chart 
+    private int highestScore;
+    
     void OnEnable() // called when set to activate
     {
         // PAUSE
@@ -16,6 +18,8 @@ public class LevelWindow : MonoBehaviour
         OpenMusicGame();
         //UNPAUSE
         MapGameManager.Instance.ResumeGame();
+        highestScore = GameManager.instance.noteChart.highestScore;
+        Debug.Log($"back to map with {highestScore} points");
     }
 
     public void OnCancelClick()
@@ -28,7 +32,8 @@ public class LevelWindow : MonoBehaviour
 
     void OpenMusicGame()
     {
-        SceneManager.LoadScene("Music");
+        GameManager.instance.StartGame(noteChart);
+        // SceneManager.LoadScene("Music");
     }
 
 }

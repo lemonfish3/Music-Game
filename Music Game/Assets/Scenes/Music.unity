@@ -1622,6 +1622,7 @@ MonoBehaviour:
   combo: 0
   maxCombo: 0
   musicManager: {fileID: 1810622186}
+  noteChart: {fileID: 0}
   hitNoteManager: {fileID: 0}
   isGameActive: 0
   pauseMenuUI: {fileID: 1439432379}
@@ -1848,6 +1849,11 @@ MonoBehaviour:
   isPlaying: 0
   songPosition: 0
   songPositionInBeats: 0
+  pause: {fileID: 1439432379}
+  results: {fileID: 1412671929}
+  finalScore: {fileID: 1063885703}
+  finalCombo: {fileID: 1725000}
+  accuracy: {fileID: 1902445315}
 --- !u!1 &1817300726
 GameObject:
   m_ObjectHideFlags: 0

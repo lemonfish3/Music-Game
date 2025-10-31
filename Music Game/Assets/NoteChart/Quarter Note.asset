@@ -13,52 +13,52 @@ MonoBehaviour:
   m_Name: Quarter Note
   m_EditorClassIdentifier: Assembly-CSharp::NoteChart
   songTitle: Lesson1
-  musicClip: {fileID: 8300000, guid: 09d7c1b0977bd410b87284a9a641faed, type: 3}
+  musicClip: {fileID: 8300000, guid: 96cec0b6ebe61499d8a94bce1aa1847e, type: 3}
   BPM: 110
-  offset: 10
+  offset: 0
   notes:
-  - beat: 5
-    duration: 0
+  - beat: 20
+    duration: 2
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
     lane: 0
     isLongNote: 0
     isRestNote: 0
-  - beat: 6
-    duration: 0
+  - beat: 22
+    duration: 2
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
     lane: 0
     isLongNote: 0
     isRestNote: 0
-  - beat: 7
-    duration: 0
+  - beat: 24
+    duration: 2
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
     lane: 0
     isLongNote: 0
     isRestNote: 0
-  - beat: 8
-    duration: 0
+  - beat: 26
+    duration: 2
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
     lane: 0
     isLongNote: 0
     isRestNote: 0
-  - beat: 9
-    duration: 0
+  - beat: 28
+    duration: 2
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
     lane: 0
     isLongNote: 0
     isRestNote: 0
-  - beat: 10
-    duration: 0
+  - beat: 30
+    duration: 2
     noteType: 2
     noteName: 
     noteSprite: {fileID: -6747174508410020200, guid: 0aa714e8351a04de0bd1efef3e432fb0, type: 3}
@@ -67,3 +67,5 @@ MonoBehaviour:
     isRestNote: 0
   lessonDescription: 
   showNoteNames: 1
+  highestScore: 0
+  passed: 0
