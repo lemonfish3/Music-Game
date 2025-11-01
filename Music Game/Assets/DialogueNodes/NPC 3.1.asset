@@ -10,15 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a9fbb351c752c41bf9d7c79d2b7d1c, type: 3}
-  m_Name: learner_starter
+  m_Name: NPC 3.1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   Speaker: 
   Lines:
-  - Hi
-  - This is a branching dialogue
-  - 1+1 = ?
-  ReplyOptions:
-  - line: 2
-    nextNode: {fileID: 11400000, guid: eeaa8a83819af3a43b1e97237999bfb2, type: 2}
-  - line: 3
-    nextNode: {fileID: 11400000, guid: 86d2db7018c7c0041a34ca571e86719c, type: 2}
+  - "Clocks? So they don\u2019t make sound? That feels\u2026 quiet."
+  ReplyOptions: []

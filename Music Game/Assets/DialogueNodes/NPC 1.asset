@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: NPC 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   Speaker: 
-  Lines: []
-  ReplyOptions: []
+  Lines:
+  - "Oh! You\u2019re from the surface, right?"
+  - 'Here, everything moves with rhythm. The beat is the heart of our world. '
+  - If you can follow it, the music will guide you.
+  ReplyOptions:
+  - line: How do I learn it?
+    nextNode: {fileID: 11400000, guid: 24c3d0d8fa6da1247b91789eeb51aa25, type: 2}

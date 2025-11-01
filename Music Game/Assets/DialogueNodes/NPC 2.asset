@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: NPC 2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   Speaker: 
-  Lines: []
-  ReplyOptions: []
+  Lines:
+  - Hey, traveler! I can teach you about rhythm and pitch.
+  - Which one do you want to learn?
+  ReplyOptions:
+  - line: Learn rhythm
+    nextNode: {fileID: 11400000, guid: 8ab09c1a6deffa841acf492b6d778375, type: 2}
+  - line: Learn pitch
+    nextNode: {fileID: 11400000, guid: ae3a4a4873afcde4bb11e7c9fbc1373b, type: 2}
+  - line: Leave
+    nextNode: {fileID: 11400000, guid: b02a8382855bf104c99e7e0da0424bfe, type: 2}

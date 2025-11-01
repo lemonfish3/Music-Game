@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a9fbb351c752c41bf9d7c79d2b7d1c, type: 3}
-  m_Name: NPC 4
+  m_Name: NPC 2.2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   Speaker: 
   Lines:
-  - There are four statues on this floor, one in each corner.
-  - "Listen carefully \u2014 the echoes are stronger there."
-  ReplyOptions: []
+  - "Pitch is the height of sound \u2014 how high or low it sings."
+  ReplyOptions:
+  - line: Learn rhythm
+    nextNode: {fileID: 11400000, guid: 8ab09c1a6deffa841acf492b6d778375, type: 2}
+  - line: Leave
+    nextNode: {fileID: 11400000, guid: b02a8382855bf104c99e7e0da0424bfe, type: 2}

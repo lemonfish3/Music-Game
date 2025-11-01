@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: NPC 3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   Speaker: 
-  Lines: []
-  ReplyOptions: []
+  Lines:
+  - "Is it true that music isn\u2019t taught in your schools?"
+  - How do you know when morning starts without the Morning Song?
+  ReplyOptions:
+  - line: ' We use clocks.'
+    nextNode: {fileID: 11400000, guid: 20a78a5fcb205e149b15941beec6f686, type: 2}
