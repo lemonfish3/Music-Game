@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 public class interactable : MonoBehaviour
 {
     [SerializeField] private bool isPlayerNearby = false;
-    public GameObject LevelWindow;
+    public LevelWindow levelWindow;
 
 
     public GameObject interactPrompt;
+
+    public NoteChart noteChart; // assign different note chart 
 
     void Start()
     {
@@ -22,7 +24,8 @@ public class interactable : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("interact with the sculpture");
-            LevelWindow.SetActive(true);
+            levelWindow.SetMusicInfo(noteChart);
+            levelWindow.gameObject.SetActive(true);
         }
     }
 

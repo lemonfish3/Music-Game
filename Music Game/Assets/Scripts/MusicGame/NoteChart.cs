@@ -16,4 +16,6 @@ public class NoteChart : ScriptableObject
     [Header("Lesson Info")]
     [TextArea] public string lessonDescription;
     public bool showNoteNames = true;
+    public int highestScore = 0;
+    public bool passed = false;
 }

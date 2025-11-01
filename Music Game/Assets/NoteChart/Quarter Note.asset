@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb04903d930bc4b64b5b5c11c7aca9fb, type: 3}
   m_Name: Quarter Note
   m_EditorClassIdentifier: Assembly-CSharp::NoteChart
-  songTitle: Lesson1
-  musicClip: {fileID: 8300000, guid: 09d7c1b0977bd410b87284a9a641faed, type: 3}
-  BPM: 110
-  offset: 10
+  songTitle: Windy Night
+  musicClip: {fileID: 8300000, guid: 310453fa5252844589058559c98d051d, type: 3}
+  BPM: 100
+  offset: 0
   notes:
   - beat: 5
     duration: 0
@@ -67,3 +67,5 @@ MonoBehaviour:
     isRestNote: 0
   lessonDescription: 
   showNoteNames: 1
+  highestScore: 0
+  passed: 0

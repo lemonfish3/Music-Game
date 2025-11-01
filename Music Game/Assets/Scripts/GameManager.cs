@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public MusicManager musicManager;
     public HitNoteManager hitNoteManager;
+    public NoteChart noteChart;
 
     [Header("Game State")]
     public bool isGameActive = false;
@@ -41,23 +42,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        if (musicManager == null)
-        {
-            musicManager = MusicManager.instance;
-        }
-        if (hitNoteManager == null)
-        {
-            hitNoteManager = HitNoteManager.instance;
-        }
-        musicManager.StartMusic();
-        isGameActive = true;
-
-        totalNotes = musicManager.noteChart.notes.Count;
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -77,16 +61,25 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        musicManager.PauseMusic();
-        pauseMenuUI.SetActive(true);
-        isGameActive = false;
+        if (SceneManager.GetActiveScene().name == "Music")
+        {
+            musicManager.PauseMusic();
+            pauseMenuUI.SetActive(true);
+            isGameActive = false;
+        }
+
+        Time.timeScale = 0f;
     }
 
     public void Resume()
     {
-        musicManager.ResumeMusic();
-        pauseMenuUI.SetActive(false);
-        isGameActive = true;
+        if (SceneManager.GetActiveScene().name == "Music")
+        {
+            musicManager.ResumeMusic();
+            pauseMenuUI.SetActive(false);
+            isGameActive = true;
+        }
+        Time.timeScale = 1f;
     }
 
     public void LoadMainGame()
@@ -95,13 +88,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Map");
     }
 
-    // public void Restart()
-    // {
-    //     // if(SceneManager.scene == "Music"){
-    //     //     //setting up the notechart and other settings
-    //     // }
-    //     SceneManager.LoadScene("Music");
-    // }
 
     public void Restart()
     {
@@ -128,16 +114,36 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(NoteChart newChart)
     {
-        // Reset music first
-        if (MusicManager.instance != null)
-        {
-            MusicManager.instance.ResetMusicSettings();
-            MusicManager.instance.SetNoteChart(newChart);
-            MusicManager.instance.StartMusic();
-        }
+        noteChart = newChart;
+        totalNotes = newChart.notes.Count;
+        isGameActive = true;
+        SceneManager.sceneLoaded += OnMusicSceneLoaded;
+        SceneManager.LoadScene("Music");
 
         // Initialize gameplay systems here
         Debug.Log("Game started with new chart: " + newChart.name);
+    }
+
+    private void OnMusicSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Music")
+        {
+            // Find the MusicManager in the scene
+            musicManager = MusicManager.instance ?? FindObjectOfType<MusicManager>();
+            if (musicManager == null)
+            {
+                Debug.LogError("[GameManager] No MusicManager found in Music scene!");
+                return;
+            }
+
+            musicManager.SetNoteChart(noteChart);
+            musicManager.StartMusic();
+
+            // Also setup HitNoteManager, NoteSpawner, etc.
+            hitNoteManager = HitNoteManager.instance ?? FindObjectOfType<HitNoteManager>();
+
+            SceneManager.sceneLoaded -= OnMusicSceneLoaded;
+        }
     }
 
     public void RegisterHit(string rating)
@@ -185,6 +191,13 @@ public class GameManager : MonoBehaviour
         // Display results panel
         resultsPanel.SetActive(true);
 
+
+        if (score > noteChart.highestScore)
+        {
+            noteChart.highestScore = score;
+        }
+        
+
         // Fill in results
         finalScoreText.text = $"Score: {score}";
         finalComboText.text = $"Max Combo: {maxCombo}";
@@ -196,6 +209,11 @@ public class GameManager : MonoBehaviour
     public float GetAccuracy()
     {
         if (totalNotes == 0) return 0f;
+        float accuracy = (float)hitNotes / totalNotes * 100f;
+        if (accuracy >= 0.6)
+        {
+            noteChart.passed = true;
+        }
         return (float)hitNotes / totalNotes * 100f;
     }
 
@@ -205,6 +223,16 @@ public class GameManager : MonoBehaviour
         return;
     }
     
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Application Quit");
+    }
+    
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Map");
+    }
 
 }
 

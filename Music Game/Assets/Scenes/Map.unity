@@ -526,6 +526,62 @@ Transform:
   - {fileID: 1357726333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &63404118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63404120}
+  - component: {fileID: 63404119}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &63404119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63404118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4b4a720982449a7b9afa9a3a40d0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  score: 0
+  combo: 0
+  maxCombo: 0
+  musicManager: {fileID: 0}
+  hitNoteManager: {fileID: 0}
+  noteChart: {fileID: 0}
+  isGameActive: 0
+  pauseMenuUI: {fileID: 0}
+  resultsPanel: {fileID: 0}
+  finalScoreText: {fileID: 0}
+  finalComboText: {fileID: 0}
+  accuracyText: {fileID: 0}
+--- !u!4 &63404120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63404118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.99226, y: 7.48873, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &74869288
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,8 +735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 1719162971}
+  noteChart: {fileID: 0}
 --- !u!1001 &78075604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2976,6 +3033,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1ce29ce14a1454bae47372139994c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelWindow
+  music: {fileID: 0}
+  levelName: {fileID: 1818347915}
+  bestScore: {fileID: 1998976668}
 --- !u!114 &224783833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7302,8 +7362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 265057010}
+  noteChart: {fileID: 11400000, guid: 46d33d56480c54c579d78916f3a3958d, type: 2}
 --- !u!1001 &263455990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11231,8 +11292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 1793694156}
+  noteChart: {fileID: 0}
 --- !u!61 &1000036544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12443,8 +12505,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 599096098}
+  noteChart: {fileID: 0}
 --- !u!1 &1146667905
 GameObject:
   m_ObjectHideFlags: 0
@@ -12813,8 +12876,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 1579188053}
+  noteChart: {fileID: 0}
 --- !u!1 &1168829416
 GameObject:
   m_ObjectHideFlags: 0
@@ -13855,8 +13919,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 189335175}
+  noteChart: {fileID: 0}
 --- !u!1 &1265583535
 GameObject:
   m_ObjectHideFlags: 0
@@ -14482,8 +14547,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1603620391}
+  noteChart: {fileID: 11400000, guid: 039ed7d3ad9c44072904ef6fec320243, type: 2}
 --- !u!1001 &1345538619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34194,8 +34260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 383550272}
+  noteChart: {fileID: 0}
 --- !u!1 &1676319592
 GameObject:
   m_ObjectHideFlags: 0
@@ -35042,8 +35109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 330269743}
+  noteChart: {fileID: 0}
 --- !u!1 &1783084045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 19527256021113670, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
@@ -36451,8 +36519,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 1967849988}
+  noteChart: {fileID: 0}
 --- !u!61 &1924510715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38218,8 +38287,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 1783084045}
+  noteChart: {fileID: 0}
 --- !u!1001 &526831149627178966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38680,8 +38750,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  LevelWindow: {fileID: 224783830}
+  levelWindow: {fileID: 0}
   interactPrompt: {fileID: 85684619}
+  noteChart: {fileID: 0}
 --- !u!4 &3736762047303338844
 Transform:
   m_ObjectHideFlags: 0
@@ -39217,3 +39288,4 @@ SceneRoots:
   - {fileID: 1061164289}
   - {fileID: 2126474482}
   - {fileID: 1082443778}
+  - {fileID: 63404120}
