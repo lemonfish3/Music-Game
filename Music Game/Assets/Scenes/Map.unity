@@ -735,9 +735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1719162971}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: cf394883f53944ee88b53c38e861448b, type: 2}
 --- !u!1001 &78075604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7404,7 +7404,7 @@ MonoBehaviour:
   isPlayerNearby: 0
   levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 265057010}
-  noteChart: {fileID: 11400000, guid: 5a4ebbec923544565a6bd429a0b159f9, type: 2}
+  noteChart: {fileID: 11400000, guid: cc5bd5b6f7ef34d8aa4531cf4c4033a5, type: 2}
 --- !u!1001 &263455990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11464,9 +11464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1793694156}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 2ddb8de0bc3db47bdb26d29c32624fd6, type: 2}
 --- !u!61 &1000036544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12712,9 +12712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 599096098}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 29aca1fc61d6346c7ad0b98236a2ef8b, type: 2}
 --- !u!1 &1146667905
 GameObject:
   m_ObjectHideFlags: 0
@@ -13083,9 +13083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1579188053}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: d99f3f58f1f80417ab0beafb742c211b, type: 2}
 --- !u!1 &1168829416
 GameObject:
   m_ObjectHideFlags: 0
@@ -14270,9 +14270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 189335175}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: c6d9267690b714fa2bc89d97da2842af, type: 2}
 --- !u!1 &1265583535
 GameObject:
   m_ObjectHideFlags: 0
@@ -14932,7 +14932,7 @@ MonoBehaviour:
   isPlayerNearby: 0
   levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1603620391}
-  noteChart: {fileID: 11400000, guid: 039ed7d3ad9c44072904ef6fec320243, type: 2}
+  noteChart: {fileID: 11400000, guid: 5a4ebbec923544565a6bd429a0b159f9, type: 2}
 --- !u!1001 &1345538619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34703,9 +34703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 383550272}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 761f74569087947c29a7cac22d34cdbd, type: 2}
 --- !u!1 &1676319592
 GameObject:
   m_ObjectHideFlags: 0
@@ -35674,9 +35674,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 330269743}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: d7377db24eeaa43daa23ec2fc5eb490f, type: 2}
 --- !u!1 &1783084045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 19527256021113670, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
@@ -37084,9 +37084,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1967849988}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 0854cb0b61cae4bce8b43eeca19658f2, type: 2}
 --- !u!61 &1924510715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38862,9 +38862,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 1783084045}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 6645c45b62a4f462cbf23f3d2497e3fa, type: 2}
 --- !u!1001 &526831149627178966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39397,9 +39397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactable
   isPlayerNearby: 0
-  levelWindow: {fileID: 0}
+  levelWindow: {fileID: 224783832}
   interactPrompt: {fileID: 85684619}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 0e3286718a68e4f48b7b32b5adefcd85, type: 2}
 --- !u!4 &3736762047303338844
 Transform:
   m_ObjectHideFlags: 0

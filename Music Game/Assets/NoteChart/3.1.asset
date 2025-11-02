@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb04903d930bc4b64b5b5c11c7aca9fb, type: 3}
+  m_Name: 3.1
+  m_EditorClassIdentifier: Assembly-CSharp::NoteChart
+  songTitle: Haunted Mansion
+  musicClip: {fileID: 8300000, guid: de3b80ae329714d949ff0a698a9f87da, type: 3}
+  BPM: 126
+  offset: 0
+  notes:
+  - beat: 8
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 16
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 24
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 32
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 40
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 48
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 56
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 64
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 72
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 80
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 88
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 96
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 104
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  - beat: 112
+    duration: 4
+    noteType: 0
+    noteName: 
+    noteSprite: {fileID: 0}
+    lane: 0
+    isLongNote: 0
+    isRestNote: 0
+  lessonDescription: 
+  showNoteNames: 1
+  highestScore: 0
+  passed: 0

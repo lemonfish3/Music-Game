@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
     public MusicManager musicManager;
     public HitNoteManager hitNoteManager;
     public NoteChart noteChart;
+
+    public List<NoteChart> allNoteChart;
 
     [Header("Game State")]
     public bool isGameActive = false;
@@ -40,6 +43,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (allNoteChart != null)
+        {
+            foreach(NoteChart chart in allNoteChart) 
+            {
+                chart.highestScore = 0;
+            }
+        } 
     }
 
     // Update is called once per frame
@@ -109,6 +119,12 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(NoteChart newChart)
     {
+        // Reset runtime state
+        score = 0;
+        combo = 0;
+        maxCombo = 0;
+        hitNotes = 0;
+
         noteChart = newChart;
         totalNotes = newChart.notes.Count;
         isGameActive = true;
