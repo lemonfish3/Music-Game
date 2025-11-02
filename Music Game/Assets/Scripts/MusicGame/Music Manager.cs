@@ -73,23 +73,11 @@ public class MusicManager : MonoBehaviour
         {
             SetNoteChart(noteChart);
             //ReStartMusic();
-            GameManager.instance.Restart();
+            // GameManager.instance.Restart();
+            StartMusic();
         }
 
     }
-
-    // void Start()
-    // {
-    //     NoteChart selectedChart = noteChart; // Load from somewhere (ScriptableObject, list, etc.)
-    //     if (noteChart == null)
-    //     {
-    //         Debug.LogError("No NoteChart assigned! Please assign one in the Inspector or load dynamically.");
-    //         return;
-    //     }
-    //     MusicManager.instance.SetNoteChart(selectedChart);
-    //     MusicManager.instance.StartMusic();
-    //     GameManagerInstance = FindObjectOfType<GameManager>();
-    // }
     
         void OnEnable()
     {

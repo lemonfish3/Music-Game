@@ -165,5 +165,27 @@ public class HitNoteManager : MonoBehaviour
             GameManagerInstance.RegisterHit(rating);
     }
 
-    
+    public void ResetHitNotes()
+    {
+        Debug.Log("[HitNoteManager] Resetting all hit note data.");
+
+        // Clear tracked notes
+        judgedNotes.Clear();
+        activeNotes = new NoteMovement[0];
+
+        // Reset rating feedback
+        currentRating = defaultRating;
+        ratingResetTimer = 0f;
+
+        // Reset all existing notes in scene if any remain
+        foreach (var note in FindObjectsOfType<NoteMovement>())
+        {
+            if (note != null)
+                note.isJudged = false;
+        }
+
+        // Re-scan for notes after reset
+        nextNoteSearch = Time.time + NOTE_SEARCH_INTERVAL;
+    }
+
 }

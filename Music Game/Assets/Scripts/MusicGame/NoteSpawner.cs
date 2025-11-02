@@ -15,18 +15,12 @@ public class NoteSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (noteChart == null)
-        {
-            Debug.LogWarning("NoteChart is not assigned.");
-        }
-        else
-        {
-            Debug.Log($"Loaded NoteChart: {noteChart.songTitle} with {noteChart.notes.Count} notes.");
-        }
         if (musicManager == null)
         {
             Debug.LogWarning("MusicManager is not assigned.");
         }
+        noteChart = musicManager.noteChart;
+        Debug.Log($"Loaded NoteChart: {noteChart.songTitle} with {noteChart.notes.Count} notes.");
     }
 
     // Update is called once per frame

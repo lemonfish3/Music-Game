@@ -1645,7 +1645,7 @@ MonoBehaviour:
   maxCombo: 0
   musicManager: {fileID: 1810622186}
   hitNoteManager: {fileID: 0}
-  noteChart: {fileID: 0}
+  noteChart: {fileID: 11400000, guid: 5a4ebbec923544565a6bd429a0b159f9, type: 2}
   isGameActive: 0
   pauseMenuUI: {fileID: 1439432379}
   resultsPanel: {fileID: 1412671929}
@@ -1867,7 +1867,7 @@ MonoBehaviour:
   musicSource: {fileID: 1810622184}
   BPM: 120
   offsetTime: 0
-  noteChart: {fileID: 11400000, guid: 039ed7d3ad9c44072904ef6fec320243, type: 2}
+  noteChart: {fileID: 11400000, guid: 5a4ebbec923544565a6bd429a0b159f9, type: 2}
   isPlaying: 0
   songPosition: 0
   songPositionInBeats: 0

@@ -67,8 +67,6 @@ public class GameManager : MonoBehaviour
             pauseMenuUI.SetActive(true);
             isGameActive = false;
         }
-
-        Time.timeScale = 0f;
     }
 
     public void Resume()
@@ -79,7 +77,6 @@ public class GameManager : MonoBehaviour
             pauseMenuUI.SetActive(false);
             isGameActive = true;
         }
-        Time.timeScale = 1f;
     }
 
     public void LoadMainGame()
@@ -91,25 +88,23 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        resultsPanel.SetActive(false);
-        pauseMenuUI.SetActive(false);
+        Debug.Log("[GameManager] Restarting level...");
+
+        // Stop music before reloading
+        if (MusicManager.instance != null)
+        {
+            MusicManager.instance.StopMusic();
+        }
+
+        // Reset runtime state
         score = 0;
         combo = 0;
         maxCombo = 0;
         hitNotes = 0;
-        isGameActive = true;
-        
-        // Reset and restart the song
-        musicManager.RestartMusic();
+        isGameActive = false;
 
-        // Clear all existing notes
-        foreach (var note in FindObjectsOfType<NoteMovement>())
-            Destroy(note.gameObject);
-
-        // Reset spawner
-        NoteSpawner spawner = FindObjectOfType<NoteSpawner>();
-        if (spawner != null)
-            spawner.ResetSpawner();
+        // Reload the current scene
+        StartGame(noteChart);
     }
 
     public void StartGame(NoteChart newChart)
@@ -191,7 +186,6 @@ public class GameManager : MonoBehaviour
         // Display results panel
         resultsPanel.SetActive(true);
 
-
         if (score > noteChart.highestScore)
         {
             noteChart.highestScore = score;
@@ -228,11 +222,14 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Application Quit");
     }
-    
+
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Map");
     }
 
+    public void BackToMain(){
+        SceneManager.LoadScene("Main");
+    }
 }
 
