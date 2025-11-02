@@ -750,6 +750,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -829,6 +833,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1802,6 +1822,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1881,6 +1905,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7377,6 +7417,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7457,6 +7513,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7478,6 +7550,10 @@ PrefabInstance:
     - target: {fileID: 19527256021113670, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Name
       value: PromptCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
@@ -7558,6 +7634,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7893,6 +7985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7972,6 +8068,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8872,6 +8984,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 42759547
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8951,6 +9067,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9333,6 +9465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9412,6 +9548,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9800,6 +9952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9879,6 +10035,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12267,6 +12439,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12346,6 +12534,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14295,6 +14499,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8773585
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14378,6 +14598,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14562,6 +14798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14641,6 +14881,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19094,6 +19350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -19173,6 +19433,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33872,6 +34148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -33955,6 +34235,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34365,6 +34661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -34444,6 +34744,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38302,6 +38618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38381,6 +38701,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38494,6 +38830,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PromptCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38574,6 +38926,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38651,6 +39019,10 @@ PrefabInstance:
     - target: {fileID: 19527256021113670, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Name
       value: PromptCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377191190389686354, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_Pivot.x
@@ -38731,6 +39103,22 @@ PrefabInstance:
     - target: {fileID: 6892896087226818062, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541899360623477695, guid: 59af60e3133146a4ba4ba8b678f2e5a4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
